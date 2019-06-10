@@ -46,7 +46,7 @@ $('#marca2').on('input', function (e) {
     </div>
      <div class="form-group">
       <label for="pwd">Tipovehiculo:</label>
-      <select class=" form-control" name="Tipovehiculo">
+      <select class=" form-control" name="Tipovehiculo" id="TipovehiculoM">
        <option value="">Selecione</option> 
        @if($Autos->tipodevehiculo=="publico")  
        <option value="publico"selected>publico</option>

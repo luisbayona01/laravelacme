@@ -425,6 +425,26 @@ $http({
 
 $scope.Updatevehiculo=function(){
 
+
+var  parametros=$("#VehiculosUpdate").serialize();
+var  url="http://laravelacme.000webhostapp.com/acme/public/update"
+if($('#placa2').val()==""){
+alert('este campo es requerido');
+return   false;
+}
+if($('#color2').val()==""){
+alert('este campo es requerido');
+return   false;
+}
+if($('#marca2').val()==""){
+  alert('este campo es requerido');
+  return   false;
+}
+if($("#TipovehiculoM").val()==""){
+    alert('este campo es requerido');
+return   false;
+}
+
 var  parametros=$("#VehiculosUpdate").serialize();
 var  url="http://localhost/acme/public/update"
 
