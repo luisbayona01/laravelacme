@@ -493,7 +493,7 @@ return  false;
 }
 
 
-if($("#Numerodecedulap").val()=""){
+if($("#Numerodecedulap").val()==""){
 
   alert('este  campo es requerido')
 return  false;
