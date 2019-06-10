@@ -1,0 +1,29 @@
+crear  la base de datos  con el nombre de  acme
+cargar las migraciones   y crear el procedimiento almacenado     tdos los  campos  son obligatorios  
+
+
+ procedimiento almacenado 
+
+  delimiter $$
+create PROCEDURE Vehiculosusers( IN  peticion varchar(45)) 
+
+BEGIN
+
+
+CASE peticion
+WHEN 'todo'  THEN
+    select  V.placa,V.marca , concat(P.PrimerNombre," ",P.Apellidos) as Nombrepropietario,concat(C.PrimerNombre," ",C.Apellidos) as nombreconductor     from  vehiculos V   left join  propietarios P   on  P.propietarios_vehiculos=V.idvehiculos 
+left  join conductores C on  C.conductores_vehiculos=V.idvehiculos;
+ WHEN 'propietarios' THEN
+   select  *  from 	propietarios ;
+ WHEN 'conductores' THEN
+   select  *  from conductores;
+   WHEN 'vehiculos' THEN
+   select  *  from vehiculos; 
+   WHEN 'total' THEN
+   select  count(*) as cuenta  from vehiculos;
+  END CASE;
+
+
+ END $$
+ 
