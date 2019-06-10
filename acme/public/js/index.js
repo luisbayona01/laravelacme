@@ -58,6 +58,32 @@ $http({
 
 }
 $scope.GuardarConductor=function(){
+	
+if($("#NumerodecedulaC").val()==""){
+alert("este campo es requerido")
+ return  false
+}
+
+if($("#PrimerNombreC").val()==""){
+alert("este campo es requerido")
+return  false
+}
+if($("#SegundoNombreC").val()==""){
+
+  alert("este campo es requerido")
+return  false
+}
+if($("#ApellidosC").val()==""){
+  alert("este campo es requerido")
+return  false
+}
+if($("#TelefonoC").val()=="" ){
+  alert("este campo es requerido")
+return  false
+} 
+	
+	
+	
   var  parametross=$("#Conductor").serialize();
  var  urls="http://localhost/acme/public/conductorsave";
 
@@ -423,6 +449,37 @@ $http({
 
 
 $scope.GuardarPropietario=function(){
+
+if($('#PrimerNombreP').val()==""){
+ alert('este campo es requerido')
+ return  false;
+}
+if($('#SegundoNombreP').val()==""){
+
+   alert('este campo es requerido')
+return  false;
+}
+
+if($('#ApellidosP').val()==""){
+
+   alert('este campo es requerido')
+return  false;
+}
+
+if($("#TelefonoP").val()==""){
+
+  alert('este  campo es requerido')
+return  false;
+}
+
+
+if($("#Numerodecedulap").val()=""){
+
+  alert('este  campo es requerido')
+return  false;
+}   
+
+
 
 var  propietario=2;
 
